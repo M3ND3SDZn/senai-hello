@@ -1,8 +1,54 @@
+<!DOCTYPE html>
 <html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <head>
         <title>CENTRAL DE ATENDIMENTO AO CLIENTE</title>
     </head>
     <body>
         <h1><center><strong>Suporte ao Atendimento ao Cliente BVA</strong></center></h1>
+       
+        <!-- Navigation -->
+    <nav class="w3-bar w3-black">
+        <center>
+        <a href="#inicio" class="w3-button w3-bar-item">Inicio</a>
+        <a href="#sobre" class="w3-button w3-bar-item">Sobre</a>
+        <a href="#contato" class="w3-button w3-bar-item">Contato</a>
+        <a href="#reclamaçao" class="w3-button w3-bar-item">Reclamaçao</a>
+        </center>
+    </nav>
+    
+    <!-- Slide Show -->
+    <section>
+        <img class="mySlides" src="logo.png" style="width: 100%">
+        <img class="mySlides" src="logo.png" style="width:100%">
+        <img class="mySlides" src="img_ny.jpg" style="width:100%">
+        <img class="mySlides" src="img_chicago.jpg" style="width:100%">
+    </section>
+    
+    <!-- Band Description -->
+    <section class="w3-container w3-center w3-content" style="max-width:600px">
+    <h2 class="w3-wide">Nós somos o Mundo</h2>
+    <p class="w3-opacity"><i>E o Mundo é nosso</i></p>
+    </section>
+
+    <script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+    </script>
     </body>
 </html>
